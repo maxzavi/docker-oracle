@@ -31,19 +31,20 @@ Luego te conectas con:
 - Usuario: appuser
 - Password: app123
 - SID/Service Name: FREEPDB1
-Crear esquema *demo*:
-
-```sql
-@sql/0_demo_schema.sql
-```
 
 Para conectarse dese sqlplus:
 
 ```bash
 export LANG=en_US.UTF-8
 export NLS_LANG=AMERICAN_AMERICA.AL32UTF8
-sqlplus system/Oracle123@localhost:1521/FREEPDb1
+sqlplus system/Oracle123@localhost:1521/FREEPDB1
 ```
+Crear esquema *demo*:
+
+```sql
+@sql/0_demo_schema.sql
+```
+
 
 Crear tabla de productos:
 

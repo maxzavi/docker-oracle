@@ -23,7 +23,7 @@ CREATE TABLE demo.PRODUCT (
     BRAND             VARCHAR2(100),
     UNIT_PRICE        NUMBER(10,2),
     CURRENCY          CHAR(3)         DEFAULT 'USD',
-    STOCK_QTY         NUMBER(10,2)    DEFAULT 0,
+   -- STOCK_QTY         NUMBER(10,2)    DEFAULT 0,
     ACTIVE_FLAG       CHAR(1)         DEFAULT 'Y' CHECK (ACTIVE_FLAG IN ('Y','N')),
     CREATED_AT        DATE            DEFAULT SYSDATE,
     UPDATED_AT        DATE,
