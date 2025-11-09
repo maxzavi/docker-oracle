@@ -20,13 +20,12 @@ BEGIN
     v_name  := v_names(TRUNC(DBMS_RANDOM.VALUE(1, v_names.COUNT+1))) || ' ' || v_brand;
     v_desc  := v_descs(TRUNC(DBMS_RANDOM.VALUE(1, v_descs.COUNT+1)));
     v_price := ROUND(DBMS_RANDOM.VALUE(2, 50), 2);
-   -- v_stock := ROUND(DBMS_RANDOM.VALUE(10, 500), 0);
 
     INSERT INTO demo.PRODUCT (
-      PRODUCT_CODE, PRODUCT_NAME, DESCRIPTION, CATEGORY, BRAND, UNIT_PRICE--, STOCK_QTY
+      PRODUCT_CODE, PRODUCT_NAME, DESCRIPTION, CATEGORY, BRAND, UNIT_PRICE
     )
     VALUES (
-      v_code, v_name, v_desc, v_cat, v_brand, v_price--, v_stock
+      v_code, v_name, v_desc, v_cat, v_brand, v_price
     );
   END LOOP;
   

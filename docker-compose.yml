@@ -9,8 +9,6 @@ services:
       - "5500:5500"   # Oracle Enterprise Manager
     environment:
       - ORACLE_PASSWORD=Oracle123
-      - APP_USER=appuser         # usuario adicional opcional
-      - APP_USER_PASSWORD=app123
     volumes:
       - oracle-data:/opt/oracle/oradata   # Persistencia de datos
     restart: unless-stopped

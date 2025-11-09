@@ -4,11 +4,9 @@
 
 ```bash
 docker run -d -p 1521:1521 -p 5500:5500 \
-  --name oracle-free \
   -e ORACLE_PASSWORD=Oracle123 \
   gvenzl/oracle-free
 ```
-
 
 Luego te conectas con:
 
@@ -17,6 +15,13 @@ Luego te conectas con:
 - Usuario: system
 - Password: Oracle123
 - SID/Service Name: FREEPDB1
+
+Para conectarse dese sqlplus:
+
+```bash
+export LANG=en_US.UTF-8
+export NLS_LANG=AMERICAN_AMERICA.AL32UTF8
+sqlplus system/Oracle123@localhost:1521/FREEPDB1
 
 2.- Crear base de datos con docker-compose, y con persistencia de datos, usando docker-compose.yml:
 
